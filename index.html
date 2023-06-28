@@ -3,9 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/css/style.css">
     <title>Timed Quiz</title>
 </head>
+
 <body>
-    
+    <!-- Top of Page Container -->
+    <div id="page-header-container">
+        <div class="page-header">
+            <p id="high-score-link">View High Scores</p>
+            <p id="timer">Time Remaining: 0</p>
+        </div>
+    </div>
+
+
+    <!-- Start Quiz Page -->
+    <div class="start-quiz-page">
+        <h1>Coding Quiz Challenge</h1>
+        <div class="start-page-instructions">
+            <p>Try to answer the following code-related questions within the time limit.</p>
+            <p>Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <button class="start-button">Start Quiz</button>
+        </div>
+    </div>
+
+    <!--  Questions Page -->
+    <div class="questions-page hide">
+        <div id="questions">
+            <!-- quiz questions will display here -->
+        </div>
+        <div id="answers">
+            <!-- quiz answer buttons will display here -->
+        </div> 
+        <div class="answer-bar hide">
+            <hr>
+            <p id="correct-or-wrong-response">
+                Correct!
+            </p>
+        </div>
+    </div>
+
+        <!-- Results Page -->
+        <div class="first-results-page hide">
+            <div class="results-page">
+                <div class="results-container">
+                    <h1>All Done!!</h1>
+                    <p>Your final score is <span id="final-score">30! Good job!</span></p>
+                    <div class="final-results">
+                        <label for="fs">Enter Initials Here: </label>
+                        <input type="text" id="fs">
+                        <button id="submit-hs">Submit Your Results</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- High Scores Page -->
+        <div class="high-score-page hide">
+            <div class="high-score-container">
+            <h1>High Scores!</h1>
+            <div class="high-scores">
+                <ul class="high-scores-list">
+                    <!-- High scores listed here -->
+                </ul>
+
+            </div>
+            <button class="go-back">Go Back</button>
+            <button class="clear">Clear High Scores</button>
+        </div>
+    </div>
+
+        <!-- Adding JS files -->
+        <script src="./Assets/js/script.js"></script>
+        <script src="./Assets/js/questions.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>
