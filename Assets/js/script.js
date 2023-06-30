@@ -53,8 +53,6 @@ const startQuiz = () => {
     startPage.classList.add('hide');
     //Remove the hide on the start page
     questionPage.classList.remove('hide');
-    //Show the questions in order of the index
-    resultsPage.classList.add('hide');
     showQuestion(questionIndex);
     //Display the timer with the total time remaining
     timerRemaining.innerText = `Time Remaining: ${totalTime}`;
@@ -204,11 +202,11 @@ while (highScoresList.firstChild) {
     localStorage.clear('HighScore');
 }
 
-//Set variables back to what they were, when clicking on the Back button
+//Set global variables back to what they were in the beginning, when clicking on the Back button
 const backToStart = () => {
     quizOver = false;
     questionIndex = 0;
-    totalTime = 0;
+    totalTime = 75; // Set the total time back to the initial value
     finalScore = 0;
     userInitials = '';
     index = 1;
